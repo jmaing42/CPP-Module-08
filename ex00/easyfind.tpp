@@ -4,16 +4,16 @@
 #include <exception>
 
 template <typename TContainer, typename TData>
-TData easyfind(TContainer container, TData i) {
+typename TContainer::iterator easyfind(TContainer &container, TData i) {
   for (typename TContainer::iterator it = container.begin();
        it != container.end(); it++) {
     if (*it == i)
-      return *it;
+      return it;
   }
   throw std::exception();
 }
 
-template <typename T> int easyfind(T container, int i) {
+template <typename T> typename T::iterator easyfind(T &container, int i) {
   return easyfind<T, int>(container, i);
 }
 
