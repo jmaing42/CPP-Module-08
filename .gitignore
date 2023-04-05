@@ -7,3 +7,9 @@ ex00/*
 !ex00/Makefile
 !ex00/main.cpp
 !ex00/easyfind.tpp
+
+ex01/*
+!ex01/Makefile
+!ex01/main.cpp
+!ex01/Span.hpp
+!ex01/Span.cpp
