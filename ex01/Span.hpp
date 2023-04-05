@@ -2,6 +2,7 @@
 #define EX01_SPAN_TPP_INCLUDED
 
 #include <vector>
+
 class Span {
 private:
   int capacity;
