@@ -1,9 +1,6 @@
 #include <deque>
 #include <iostream>
 #include <list>
-#include <memory>
-#include <queue>
-#include <stack>
 #include <vector>
 
 #include "easyfind.tpp"

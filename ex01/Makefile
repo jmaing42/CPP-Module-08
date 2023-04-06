@@ -1,7 +1,7 @@
 NAME = ex01
 OBJS = main.o Span.o
 
-CXXFLAGS = -Wall -Wextra -Werror -g
+CXXFLAGS = -Wall -Wextra -Werror
 
 
 all: $(NAME)
