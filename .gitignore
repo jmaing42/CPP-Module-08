@@ -13,3 +13,8 @@ ex01/*
 !ex01/main.cpp
 !ex01/Span.hpp
 !ex01/Span.cpp
+
+ex02/*
+!ex02/Makefile
+!ex02/main.cpp
+!ex02/MutantStack.tpp
