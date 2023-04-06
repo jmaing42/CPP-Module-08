@@ -20,12 +20,12 @@ void Span::addNumber(int number) {
 int Span::shortestSpan() const {
   if (this->numbers.size() < 2)
     throw std::exception();
-  std::vector<int> sorted = this->numbers;
-  std::sort(sorted.begin(), sorted.end());
+  std::vector<int> copy = this->numbers;
+  std::sort(copy.begin(), copy.end());
   bool isFirst = true;
   int last;
   int result;
-  for (std::vector<int>::iterator it = sorted.begin(); it != sorted.end();) {
+  for (std::vector<int>::iterator it = copy.begin(); it != copy.end();) {
     if (!isFirst) {
       int difference = *it - last;
       if (result > difference)
@@ -45,10 +45,10 @@ int Span::shortestSpan() const {
 int Span::longestSpan() const {
   if (this->numbers.size() < 2)
     throw std::exception();
+  std::vector<int> copy = this->numbers;
   int max = this->numbers[0];
   int min = this->numbers[0];
-  for (std::vector<int>::const_iterator it = this->numbers.cbegin();
-       it != this->numbers.cend(); it++) {
+  for (std::vector<int>::iterator it = copy.begin(); it != copy.end(); it++) {
     if (max < *it)
       max = *it;
     if (min > *it)
