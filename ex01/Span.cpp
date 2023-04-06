@@ -45,10 +45,10 @@ int Span::shortestSpan() const {
 int Span::longestSpan() const {
   if (this->numbers.size() < 2)
     throw std::exception();
-  std::vector<int> copy = this->numbers;
   int max = this->numbers[0];
   int min = this->numbers[0];
-  for (std::vector<int>::iterator it = copy.begin(); it != copy.end(); it++) {
+  for (std::vector<int>::const_iterator it = this->numbers.begin();
+       it != this->numbers.end(); it++) {
     if (max < *it)
       max = *it;
     if (min > *it)

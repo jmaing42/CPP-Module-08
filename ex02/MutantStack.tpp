@@ -14,6 +14,14 @@ public:
   typename TContainer::iterator end() { return this->c.end(); }
   typename TContainer::reverse_iterator rbegin() { return this->c.rbegin(); }
   typename TContainer::reverse_iterator rend() { return this->c.rend(); }
+  typename TContainer::const_iterator begin() const { return this->c.begin(); }
+  typename TContainer::const_iterator end() const { return this->c.end(); }
+  typename TContainer::const_reverse_iterator rbegin() const {
+    return this->c.rbegin();
+  }
+  typename TContainer::const_reverse_iterator rend() const {
+    return this->c.rend();
+  }
 };
 
 #endif
