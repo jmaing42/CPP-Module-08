@@ -6,7 +6,7 @@
 
 #include "MutantStack.tpp"
 
-void test() {
+static void test() {
   MutantStack<int> mstack;
   mstack.push(5);
   mstack.push(17);
@@ -32,7 +32,7 @@ void test() {
 template <template <typename TData, typename TAllocator =
                                         std::allocator<TData> /* clangd bug */>
           class T>
-void test() {
+static void test() {
   MutantStack<int, T<int> /* clangd bug */> mstack;
   mstack.push(5);
   mstack.push(17);

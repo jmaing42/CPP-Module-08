@@ -3,7 +3,7 @@
 
 #include "Span.hpp"
 
-void test(int count) {
+static void test(int count) {
   Span sp(count);
   for (int i = 0; i < count; i++) {
     sp.addNumber(rand() % 4242);

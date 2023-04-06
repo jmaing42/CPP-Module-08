@@ -9,7 +9,7 @@
 template <template <typename TData, typename TAllocator =
                                         std::allocator<TData> /* clangd bug */>
           class T>
-void test(T<int> &container, int value) {
+static void test(T<int> &container, int value) {
   try {
     for (typename T<int>::iterator iter = easyfind(container, value);
          iter != container.end(); iter++) {
@@ -23,7 +23,7 @@ void test(T<int> &container, int value) {
 template <template <typename TData, typename TAllocator =
                                         std::allocator<TData> /* clangd bug */>
           class T>
-void test() {
+static void test() {
   T<int> container;
   container.push_back(4);
   container.push_back(2);
