@@ -9,19 +9,18 @@ template <typename TData,
 class MutantStack : public std::stack<TData, TContainer> {
 public:
   typedef typename TContainer::iterator iterator;
+  typedef typename TContainer::reverse_iterator reverse_iterator;
+  typedef typename TContainer::const_iterator const_iterator;
+  typedef typename TContainer::const_reverse_iterator const_reverse_iterator;
 
-  typename TContainer::iterator begin() { return this->c.begin(); }
-  typename TContainer::iterator end() { return this->c.end(); }
-  typename TContainer::reverse_iterator rbegin() { return this->c.rbegin(); }
-  typename TContainer::reverse_iterator rend() { return this->c.rend(); }
-  typename TContainer::const_iterator begin() const { return this->c.begin(); }
-  typename TContainer::const_iterator end() const { return this->c.end(); }
-  typename TContainer::const_reverse_iterator rbegin() const {
-    return this->c.rbegin();
-  }
-  typename TContainer::const_reverse_iterator rend() const {
-    return this->c.rend();
-  }
+  iterator begin() { return this->c.begin(); }
+  iterator end() { return this->c.end(); }
+  reverse_iterator rbegin() { return this->c.rbegin(); }
+  reverse_iterator rend() { return this->c.rend(); }
+  const_iterator begin() const { return this->c.begin(); }
+  const_iterator end() const { return this->c.end(); }
+  const_reverse_iterator rbegin() const { return this->c.rbegin(); }
+  const_reverse_iterator rend() const { return this->c.rend(); }
 };
 
 #endif
