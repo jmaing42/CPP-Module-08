@@ -15,6 +15,11 @@ public:
   Span &operator=(const Span &copy);
 
   void addNumber(int number);
+  template <typename T> void addNumber(T begin, T end) {
+    for (; begin != end; begin++)
+      this->addNumber(*begin);
+  }
+
   int shortestSpan() const;
   int longestSpan() const;
 };
